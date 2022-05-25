@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<title></title>
+<style type="text/css">
+    *{
+        background-color: bisque;
+    }
+ h1{
+  background-color: #d1612d;
+  color: #1b78b6;
+  text-align: center;
+
+ }
+ .res{
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  color: #1f1918;
+  font-size: 24px;
+ }
+ img{
+    width: 20%;
+    text-align: center;
+}
+.perrito{
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+ <header><h1>Calcule la edad de su Cachorrito</h1></header>
+ <section class="res">
+ <br>
+ <h3>Ingrese el nombre de su perrito</h3>
+ <input type="text" id="nro3">
+ <button id="btn3">Ingresar</button>
+ <h3>Ingrese la edad de su perrito</h3>
+ <input type="number" id="nro1">
+
+ <button id="btn">Calcular por log</button>
+ <button id="btn2">Calcular multipliación</button>
+
+ <br><br>
+    <h2>Resultado del la edad:</p>
+ <div id="resultado"></div>
+
+ <script>
+  //  registra un evento 
+  var b=document.getElementById('btn');
+  b.addEventListener('click',suma);
+  var c=document.getElementById('btn2');
+  c.addEventListener('click',mul);
+  var d=document.getElementById('btn3');
+  d.addEventListener('click',nam);
+  function suma() 
+  {
+   var n1=parseInt(document.getElementById('nro1').value);
+            var s=19*Math.log(n1)+31;
+            var s=s.toFixed(0)
+    document.getElementById("resultado").innerHTML = "La edad humana de su perrito es "+s+" años humanos."
+  }
+  function mul() 
+  {
+   var n1=parseInt(document.getElementById('nro1').value);
+            var s=n1*7;
+            var s=s.toFixed(0)
+    document.getElementById("resultado").innerHTML = "La edad humana de su perrito es "+s+" años humanos."
+  }
+    function nam (){
+        var n1=String(document.getElementById('nro3').value);
+    document.getElementById("nombre").innerHTML=n1
+  }
+  </script>
+  <br>
+  <img src="https://tvazteca.brightspotcdn.com/38/e6/7b33cdd042d5a378d56a7f81fa73/perritos-primeros-auxilios.jpg">
+  <div id="nombre"></div>
+
+</section>
+</body>
+
+</html>
